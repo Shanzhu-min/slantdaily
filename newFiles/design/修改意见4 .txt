@@ -1,0 +1,14 @@
+# how to play 修改意见
+- 按当前棋盘，生成一个4*4的题目，在题目中，需要至少包括1个“0“值 线索和1个”4“值线索，并确认该题目有解。
+- 当点击how to play时，弹出框左侧区域展示棋盘（棋盘状态是所有单元格已按解法绘制）。右侧文本是：This is a completed Slant puzzle example. Your goal is to fill every net with diagonal line while also matching all the numerical clues. 此时的How to play的标题和左侧棋盘保持水平对齐。将Next 改为 Step 1。
+- 当点击Step 1时，棋盘状态重置，并在线索”4“的4个单元格中画上对角线。标题改为：Rule One 。文本内容是：You need to draw a diagonal line in each cell—the number in the circle indicates how many diagonal lines connect to that cell.'0' clues - we know that none of the surrounding cells connect to these nodes.'4' clues - we know that all of the surrounding cells connect to these nodes. 将Step 1 按钮改为Step 2.
+- 当点击Step 2时，棋盘状态重置，并在棋盘的任一区域形成一条闭环线索，按棋盘的设定，高亮红色显示。标题改为 Rule Two。 文本内容是：Another rule is that diagonals cannot form a closed loop. 将Step 2 按钮改为Step 3.
+- 当点击Step 3时，棋盘状态重置，并按解法绘制对角线，但预留一个单元格不要绘制。标题改为 Almost。文本是：The game will only end when all cells have been drawn. The current {reserved cell} has not yet been drawn. 而{reserved cell} 则是预留单元格的具体座标。Step 3改为Finish。
+- 当点击Finish时，棋盘状态重置，所有单元格完成绘制，并显示为已解状态，并在棋盘上有一个小撒花的动画效果。标题改为 Finish。文本为：The game is complete when all cells are filled according to the clues. Congratulations! 而Finish按钮显示为again。当点击again时，回到刚打开的状态。
+
+
+- 以上标题如果有语法问题、表述问题，你可以在理解我的意图的基础上，进行修改或替换。
+- 以上文本内容，如果有语法或表述问题，你可以进行修改。同时net、grid、cell全部使用cell。 
+- 在棋盘绘制时，必须严格按规则进行绘制（除了要绘制规则2，不能闭环除外），不能随机违规绘制。
+- 以上说的棋盘都是不可操作的静态棋盘，只作演示使用。
+

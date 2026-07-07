@@ -1,0 +1,120 @@
+export const metadata = {
+title: "How to Play Slant: A Beginner Puzzle Guide",
+description: "Discover how to play Slant with simple rules, slant puzzle examples, and beginner tips for daily logic practice online.",
+category: "Guide",
+date: "2026-07-07",
+}
+
+Start Here: What Slant Asks You to Do
+
+Slant is a diagonal logic puzzle where every square gets one slash, and every clue tells you how many lines must meet at that point. If you are new to Slant, the goal is not to draw quickly; it is to read the numbers, place safe lines, and avoid closed loops.
+
+This matters because a slant puzzle can look simple while hiding several logical traps. The official Simon Tatham version describes the core objective as filling every grid square with a diagonal line while matching numbered points and preventing loops. BrainBashers explains the same idea for daily Slants: replace each cross with a slanted line, follow the clues, and do not make loops.
+
+Rule	What It Means
+One line per cell	Every square must contain / or \
+Numbers are clues	A number shows how many lines touch that point
+Loops are forbidden	Lines cannot close into an enclosed shape
+Logic beats guessing	Good puzzles should be solved by deduction
+
+Before you play today’s board, open the daily Slant challenge and treat the first puzzle as rule practice, not a speed test.
+
+How the Board Works
+
+A slant game board is made of square cells and intersection points. Some intersections have numbers from 0 to 4. Those numbers count how many diagonal lines touch that exact point.
+
+For example, a 0 means no diagonal may touch it. A 4 means every possible surrounding diagonal must touch it. A 1, 2, or 3 needs more careful checking, especially when the clue is in the center of the grid.
+
+Clue	Beginner Meaning	Useful First Thought
+0	No touching lines	Block every line into this point
+1	Exactly one touching line	Look for the only possible option
+2	Exactly two touching lines	Compare nearby pairs
+3	Exactly three touching lines	Find the one missing line
+4	All possible lines touch	Fill all surrounding connections
+
+A slant online board usually lets you click or tap a cell to switch between slash directions. On paper, you can write lightly, erase, and test possibilities. Either way, the logic is the same.
+
+A Simple Step-by-Step Solving Method
+
+New players often lose time because they start in the middle of the board. A better approach is to begin with the most restricted clues.
+
+Use this routine for your first few slant puzzles:
+
+Find every 0 clue.
+Find every 4 clue.
+Check the corners.
+Check the edges.
+Place only forced diagonals.
+Pause and look for possible loops.
+Recount nearby numbers after each move.
+Step	Why It Helps
+Start with 0s	They forbid every touching line
+Then check 4s	They force every touching line
+Use corners early	Corners have fewer options
+Use edges next	Edges are more limited than centers
+Watch loops often	A legal-looking line can still be wrong
+
+Here is a quick example. If a corner point is marked 1, and only one cell can touch that point, the diagonal in that cell is usually forced. If a nearby point is 0, that same cell may be forced the other way. These small clues often start a chain reaction.
+
+For more practice after your first solve, use archived Slant puzzles for replay. Replaying an old board helps you see which clue actually unlocked the puzzle.
+
+The No-Loop Rule: The Part Beginners Miss
+
+The no-loop rule is the reason Slant feels different from many number puzzles. A move can satisfy a number clue and still be wrong if it closes a loop.
+
+Gokigen Naname, also known as Slant, is commonly described as a puzzle where diagonal lines must match numbered intersections and must not form enclosed loops. Unlike some network puzzles, the lines do not need to become one single connected network, but they must avoid closed cycles.
+
+Situation	What to Ask
+A path almost closes	Will this diagonal seal a loop?
+Two choices both fit a number	Which choice keeps the path open?
+A clue looks finished	Did I accidentally trap an area?
+The board feels stuck	Is the no-loop rule forcing the next move?
+
+Community discussions about stuck Slant boards often point to loop prevention as the missing idea. In one Reddit thread, a solver explains that the next move depends on remembering that loops are not allowed.
+
+A useful habit: after every 5 to 8 placed lines, stop and scan the shape of the network. If a path is bending back toward itself, slow down before adding the final side.
+
+Beginner Tips for Daily Slant Practice
+
+A slant daily game is a great training format because you get one fresh board, one clear goal, and one chance to notice improvement. You do not need to solve for hours. Ten focused minutes can teach more than random clicking through multiple boards.
+
+Use free Slant puzzles for practice when today’s puzzle feels too difficult. A slant free practice board gives you space to test patterns without worrying about your streak.
+
+A practical metric is your “guess count.” After each puzzle, write down how many times you guessed. If your guess count drops from 5 to 2 over a week, your rule reading is improving. For a beginner, that matters more than raw speed.
+
+When You Get Stuck
+
+Getting stuck in a slant game is normal. The important part is knowing what to check next.
+
+Use this rescue checklist:
+
+Recount every number near your last move.
+Look for a 0 or 4 you ignored.
+Check whether a line would close a loop.
+Find a clue that is almost complete.
+Test whether one option creates a contradiction.
+Step away for 30 seconds and rescan the edges.
+Problem	Likely Fix
+No obvious move	Recheck corners and edges
+Too many choices	Look for loop danger
+Numbers do not match	Find the first overfilled clue
+Puzzle feels broken	Undo the last guessed move
+
+Do not treat guessing as failure, but do not make it your main method. The best Slant progress comes from learning why a move is forced. For deeper help, read Slant tips for stuck players after you understand the basics.
+
+FAQ
+What is the easiest way to learn Slant?
+
+The easiest way to learn Slant is to start with 0s, 4s, corners, and edge clues. These areas have fewer possibilities, so they often reveal forced moves before the center of the board.
+
+Can I play Slant online for free?
+
+Yes. You can play slant online using daily boards, practice puzzles, or archive replays. A slant free mode is useful for learning rules, testing strategies, and improving before harder challenges.
+
+Is a slant puzzle solved only by numbers?
+
+No. A slant puzzle must satisfy the numbers and avoid closed loops. Beginners often focus only on clue counts, but loop prevention is just as important for a valid solution.
+
+Why play a slant daily game?
+
+A slant daily game helps you build a consistent logic habit. One puzzle per day lets you track progress, reduce guessing, improve solve time, and recognize repeated diagonal patterns.

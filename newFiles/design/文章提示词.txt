@@ -1,0 +1,187 @@
+# 变量
+- {keywords} = "Slant","slant daily game","slant game","slant online","slant free","slant of day","slant puzzle","slant puzzles";
+- {topics} = = ["Slant Rules","Slant or Sudoku ","How to play slant","Why is it worth playing slant every day","Slant tips"]
+
+# 任务
+
+参考{topics}中内容，结合google搜索、youtobe中的内容，以及reddit等社区中的贴子，帮我生成15篇文章标题。为每一篇内容添加包括且不限于“Rule”/“Tips”/"Article"等标签。并按以下json格式返回。
+"item":[
+{
+ "title":"文章标题，限制50-60个字符之间，需要包括{keywords}中任一关键词",
+ "brief":"文章摘要",
+ "Priority":"优先级，按1-5进行设定，5最高，1最低",
+ "label":"生成1-3个文章标签"
+}
+]
+
+{
+  "item": [
+    {
+      "title": "Slant Rules Explained: Lines, Numbers, No Loops",
+      "brief": "A beginner-friendly rule article explaining how Slant works, including diagonal lines, numbered intersections, and the no-loop condition.",
+      "Priority": 5,
+      "label": ["Rule", "Beginner", "Guide"]
+    },
+    {
+      "title": "How to Play Slant: A Beginner Puzzle Guide",
+      "brief": "A step-by-step guide for new players who want to learn how to play Slant from the first move to a complete solution.",
+      "Priority": 5,
+      "label": ["Guide", "Beginner", "Tutorial"]
+    },
+    {
+      "title": "Slant Tips for Stuck Players: Find Next Moves",
+      "brief": "A practical tips article focused on what to do when a player gets stuck, including checking 0s, 4s, edges, and loop risks.",
+      "Priority": 5,
+      "label": ["Tips", "Strategy", "Article"]
+    },
+    {
+      "title": "Slant vs Sudoku: Which Logic Puzzle Fits Best?",
+      "brief": "A comparison article explaining how Slant differs from Sudoku in rules, deduction style, difficulty, and daily replay value.",
+      "Priority": 4,
+      "label": ["Article", "Comparison", "Logic Puzzle"]
+    },
+    {
+      "title": "Why Play a Slant Daily Game Every Day?",
+      "brief": "An article about the value of daily Slant practice, including streaks, habit building, pattern memory, and short logic training sessions.",
+      "Priority": 4,
+      "label": ["Daily", "Article", "Habit"]
+    },
+    {
+      "title": "Slant Puzzle Mistakes Beginners Should Avoid",
+      "brief": "A beginner-focused article covering common Slant mistakes, such as guessing too early, ignoring loops, and overfilling numbered clues.",
+      "Priority": 4,
+      "label": ["Tips", "Beginner", "Mistakes"]
+    },
+    {
+      "title": "Slant Online Guide: From First Click to Solve",
+      "brief": "A guide for online players explaining how to interact with a Slant board, use hints carefully, and build a reliable solving routine.",
+      "Priority": 4,
+      "label": ["Guide", "Online", "Tutorial"]
+    },
+    {
+      "title": "Slant Free Puzzles: Best Way to Practice Logic",
+      "brief": "An article explaining how free Slant puzzles help players practice diagonal reasoning, test strategies, and improve before daily challenges.",
+      "Priority": 4,
+      "label": ["Article", "Practice", "Free"]
+    },
+    {
+      "title": "Slant of Day: How Daily Challenges Improve Skill",
+      "brief": "A daily challenge article showing how one fresh Slant puzzle per day can improve consistency, solve time, and long-term puzzle habits.",
+      "Priority": 4,
+      "label": ["Daily", "Article", "Progress"]
+    },
+    {
+      "title": "Advanced Slant Tips: Corners, Edges, and 2s",
+      "brief": "A strategy article for intermediate players, covering corner deductions, edge logic, linked 2 clues, and harder next-step reasoning.",
+      "Priority": 3,
+      "label": ["Tips", "Advanced", "Strategy"]
+    },
+    {
+      "title": "Slant Puzzle Loops: Why They Break Solutions",
+      "brief": "A focused rules article explaining why closed loops are forbidden, how loops appear, and how to spot loop traps before they happen.",
+      "Priority": 3,
+      "label": ["Rule", "Strategy", "Article"]
+    },
+    {
+      "title": "Slant Puzzles for Sudoku Fans: What Changes?",
+      "brief": "An article targeting Sudoku players, explaining how Slant uses diagonal paths, number clues, and network logic instead of region filling.",
+      "Priority": 3,
+      "label": ["Article", "Comparison", "Audience"]
+    },
+    {
+      "title": "Slant Game Strategy: Solve Without Guessing",
+      "brief": "A strategy article built around logical deduction, showing players how to reduce trial and error through forced moves and contradiction checks.",
+      "Priority": 3,
+      "label": ["Strategy", "Tips", "Guide"]
+    },
+    {
+      "title": "Slant Daily Game Archive: Replay Missed Boards",
+      "brief": "An archive-focused article explaining how players can replay missed daily puzzles, review older boards, and use past games for practice.",
+      "Priority": 2,
+      "label": ["Daily", "Archive", "Article"]
+    },
+    {
+      "title": "Printable Slant Puzzles: Paper Logic Practice",
+      "brief": "An article for players who want printable Slant puzzles, including easy, medium, hard, daily boards, and optional answer sheets.",
+      "Priority": 2,
+      "label": ["Printable", "Practice", "Article"]
+    }
+  ]
+}
+
+
+
+
+- {title} : {"Slant Rules Explained: Lines, Numbers, No Loops","How to Play Slant: A Beginner Puzzle Guide","Slant Tips for Stuck Players: Find Next Moves","Slant vs Sudoku: Which Logic Puzzle Fits Best?",
+"Why Play a Slant Daily Game Every Day?",
+"",
+"",
+"",
+"", 
+"Advanced Slant Tips: Corners, Edges, and 2s",
+""}
+
+# 参考资料
+- {keywords} = "Slant","slant daily game","slant game","slant online","slant free","slant of day","slant puzzle","slant puzzles";
+你是一位拥有丰富经验、专门撰写游戏博客 SEO 内容的资深文案作者。当前正我为"Slant Daily"的游戏站写博客。
+
+# 标题
+- "title" ： “Printable Slant Puzzles: Paper Logic Practice”
+
+
+## 文章描述规则
+用 1-2 句自然的话描述页面内容，包含 {keywords}
+长度控制在 150-160 个字符
+避免关键词堆砌（谷歌现在更依赖语义分析，而非关键词密度）
+可以使用引人注目的号召语（如"Get the latest..."、"Discover..."）
+
+## 撰写要求
+
+1. 撰写一篇全原创的博客文章，约 800 词
+2. 在文中至少插入 7 次主关键词：
+   - 在 title 字段中出现一次（会被页面模板自动渲染为 H1）
+   - 在前 80 词内出现两次
+   - 在正文中自然融入 4 次以上
+3. 自然地融入语义相关词和 LSI 关键词
+4. 提供实用的技巧、统计数据或示例
+5. 引用参考资料时请意译，避免直接复制
+6. 使用描述性锚文本
+
+## 文章结构
+
+- 以 JS metadata export 开头（见下方输出格式）
+- **不要生成 H1 标题**（title 作为 H1，直接从 H2 正文开始）
+- 4-6 个 H2 标题，可选 H3 子标题
+- **多用 Markdown 表格**展示对比、数据、步骤、等信息
+- 使用项目符号列表
+- 每段控制在 120 词以内
+- 以 FAQ 区收尾（3-4 组问答，使用主关键词至少一次）
+
+## 引言部分
+
+- 3 句话内设下钩子，吸引读者
+- 立即回答"为什么这很重要"
+
+## 输出格式
+
+输出以 JavaScript metadata export 开头的 Markdown 文件：
+
+export const metadata = {
+  title: "文章标题",
+  description: "SEO 描述（最多 155 字符），包括用户感兴趣的关键词",
+  category: "{category}",
+  date: "{current_date}",
+}
+
+[文章正文从这里开始，标准 Markdown 格式，不含 H1]
+
+## 重要提醒
+
+- 不要用代码块（```）包裹文章内容
+- 文章必须以 export const metadata = { 开头
+- 使用自然流畅的美式英语
+- 遵循 Google「Helpful Content」指南
+- 以用户价值为核心，避免关键词堆砌
+- 确保信息准确
+
+现在请按照以上所有要求生成完整的英文文章。

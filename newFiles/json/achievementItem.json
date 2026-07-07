@@ -1,0 +1,94 @@
+{
+  "item": [
+    {
+      "title": "First Step Solver",
+      "image": "newFiles/icon/archievement_image/First Step Solver.png",
+      "description": "Complete your very first Slant puzzle in any mode and begin your logical journey.",
+      "count": 1
+    },
+    {
+      "title": "Daily Challenger",
+      "image": "newFiles/icon/archievement_image/Daily Challenger.png",
+      "description": "Finish your first daily challenge and join the global Slant leaderboard experience.",
+      "count": 1
+    },
+    {
+      "title": "Daily Rookie",
+      "image": "newFiles/icon/archievement_image/Daily Rookie.png",
+      "description": "Complete 5 daily challenges and start building a consistent puzzle-solving habit.",
+      "count": 5
+    },
+    {
+      "title": "Daily Veteran",
+      "image": "newFiles/icon/archievement_image/Daily Veteran.png",
+      "description": "Complete 20 daily challenges and prove your long-term dedication to Slant puzzles.",
+      "count": 20
+    },
+    {
+      "title": "Daily Master",
+      "image": "newFiles/icon/archievement_image/Daily Master.png",
+      "description": "Complete 100 daily challenges and become a true master of consistent logical reasoning.",
+      "count": 100
+    },
+    {
+      "title": "Practice Starter",
+      "image": "newFiles/icon/archievement_image/Practice Starter.png",
+      "description": "Finish 10 practice puzzles and get comfortable with Slant game mechanics and patterns.",
+      "count": 10
+    },
+    {
+      "title": "Easy Explorer",
+      "image": "newFiles/icon/archievement_image/Easy Explorer.png",
+      "description": "Complete 10 easy puzzles and build confidence with fundamental Slant strategies.",
+      "count": 10
+    },
+    {
+      "title": "Medium Mind",
+      "image": "newFiles/icon/archievement_image/Medium Mind.png",
+      "description": "Solve 10 medium puzzles and demonstrate solid intermediate logical thinking skills.",
+      "count": 10
+    },
+    {
+      "title": "Hard Thinker",
+      "image": "newFiles/icon/archievement_image/Hard Thinker.png",
+      "description": "Conquer 10 hard puzzles and push your logical reasoning to advanced levels.",
+      "count": 10
+    },
+    {
+      "title": "Slant Enthusiast",
+      "image": "newFiles/icon/archievement_image/Slant Enthusiast.png",
+      "description": "Complete 50 total puzzles in any mode and show true passion for Slant challenges.",
+      "count": 50
+    },
+    {
+      "title": "Grid Walker",
+      "image": "newFiles/icon/archievement_image/Grid Walker.png",
+      "description": "Reach 200 total completed games and become a veteran of Slant grid navigation.",
+      "count": 200
+    },
+    {
+      "title": "Streak Builder",
+      "image": "newFiles/icon/archievement_image/Streak Builder.png",
+      "description": "Maintain a 3-day daily challenge streak and build your solving consistency.",
+      "count": 3
+    },
+    {
+      "title": "Streak Keeper",
+      "image": "newFiles/icon/archievement_image/Streak Keeper.png",
+      "description": "Maintain a 7-day daily challenge streak and strengthen your daily puzzle habit.",
+      "count": 7
+    },
+    {
+      "title": "c",
+      "image": "newFiles/icon/archievement_image/Streak Keeper.png",
+      "description": "Maintain a 30-day streak in daily challenges and achieve legendary consistency.",
+      "count": 30
+    },
+    {
+      "title": "Perfectionist",
+      "image": "newFiles/icon/archievement_image/Perfectionist.png",
+      "description": "c",
+      "count": 10
+    }
+  ]
+}

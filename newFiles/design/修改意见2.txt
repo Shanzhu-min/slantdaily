@@ -1,0 +1,24 @@
+# 修改意见 
+
+## 页面共性问题
+- H1的字体大小，比H2大2个字号。
+- 每一个section之前，间隔再增加30px.
+- 确认每一个页面的H1是一致的字体、字号。
+- footer区域中，设置为三列。第一列分别展示：Daily Slant、Achive、Achievements、Printable Slant；第二列分别展示：Rules、How To Play Slant、View All Articles；第三列分别展示：Privacy Policy、Term Of  Use、About、Contact Us;
+
+
+## Daily Slant
+
+- 当前游戏区的高度在650px左右，将其扩展到800px。
+- H1和内容参考H2与其内容的布局。H1左对齐，描述内容加到框中。
+
+## Achievements
+- 右侧游戏记录区域，在best time下方增加一个best day，对应最好成绩的日期。
+
+## Printable Slant
+- 左侧预览区域Tips改为3条。
+- 右侧去掉new Puzzle的按钮。
+
+
+## Rules
+- 文章卡片中，配图的高度设置为200px。如果提供的配图尺寸不符合，则按设置的尺寸进行匹配。

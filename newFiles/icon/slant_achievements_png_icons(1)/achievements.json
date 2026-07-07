@@ -1,0 +1,109 @@
+{
+  "item": [
+    {
+      "title": "First Step Solver",
+      "imageUnlocked": "/icons/png/locked/first_step_solver_locked.png",
+      "imageComplate": "/icons/png/unlocked/first_step_solver_unlocked.png",
+      "description": "Complete your very first Slant puzzle in any mode and begin your logical journey.",
+      "count": 1
+    },
+    {
+      "title": "Daily Challenger",
+      "imageUnlocked": "/icons/png/locked/daily_challenger_locked.png",
+      "imageComplate": "/icons/png/unlocked/daily_challenger_unlocked.png",
+      "description": "Finish your first daily challenge and join the Slant leaderboard experience.",
+      "count": 1
+    },
+    {
+      "title": "Daily Rookie",
+      "imageUnlocked": "/icons/png/locked/daily_rookie_locked.png",
+      "imageComplate": "/icons/png/unlocked/daily_rookie_unlocked.png",
+      "description": "Complete 5 daily challenges and start building a consistent puzzle-solving habit.",
+      "count": 5
+    },
+    {
+      "title": "Daily Veteran",
+      "imageUnlocked": "/icons/png/locked/daily_veteran_locked.png",
+      "imageComplate": "/icons/png/unlocked/daily_veteran_unlocked.png",
+      "description": "Complete 20 daily challenges and prove your long-term dedication to Slant puzzles.",
+      "count": 20
+    },
+    {
+      "title": "Daily Master",
+      "imageUnlocked": "/icons/png/locked/daily_master_locked.png",
+      "imageComplate": "/icons/png/unlocked/daily_master_unlocked.png",
+      "description": "Complete 100 daily challenges and become a true master of consistent logical reasoning.",
+      "count": 100
+    },
+    {
+      "title": "Practice Starter",
+      "imageUnlocked": "/icons/png/locked/practice_starter_locked.png",
+      "imageComplate": "/icons/png/unlocked/practice_starter_unlocked.png",
+      "description": "Finish 10 practice puzzles and get comfortable with Slant mechanics and patterns.",
+      "count": 10
+    },
+    {
+      "title": "Easy Explorer",
+      "imageUnlocked": "/icons/png/locked/easy_explorer_locked.png",
+      "imageComplate": "/icons/png/unlocked/easy_explorer_unlocked.png",
+      "description": "Complete 10 easy puzzles and build confidence with fundamental Slant strategies.",
+      "count": 10
+    },
+    {
+      "title": "Medium Mind",
+      "imageUnlocked": "/icons/png/locked/medium_mind_locked.png",
+      "imageComplate": "/icons/png/unlocked/medium_mind_unlocked.png",
+      "description": "Solve 10 medium puzzles and demonstrate solid intermediate logical thinking skills.",
+      "count": 10
+    },
+    {
+      "title": "Hard Thinker",
+      "imageUnlocked": "/icons/png/locked/hard_thinker_locked.png",
+      "imageComplate": "/icons/png/unlocked/hard_thinker_unlocked.png",
+      "description": "Conquer 10 hard puzzles and push your logical reasoning to advanced levels.",
+      "count": 10
+    },
+    {
+      "title": "Slant Enthusiast",
+      "imageUnlocked": "/icons/png/locked/slant_enthusiast_locked.png",
+      "imageComplate": "/icons/png/unlocked/slant_enthusiast_unlocked.png",
+      "description": "Complete 50 total puzzles in any mode and show true passion for Slant challenges.",
+      "count": 50
+    },
+    {
+      "title": "Grid Walker",
+      "imageUnlocked": "/icons/png/locked/grid_walker_locked.png",
+      "imageComplate": "/icons/png/unlocked/grid_walker_unlocked.png",
+      "description": "Reach 200 total completed games and become a veteran of Slant grid navigation.",
+      "count": 200
+    },
+    {
+      "title": "Streak Builder",
+      "imageUnlocked": "/icons/png/locked/streak_builder_locked.png",
+      "imageComplate": "/icons/png/unlocked/streak_builder_unlocked.png",
+      "description": "Maintain a 3-day daily challenge streak and build your solving consistency.",
+      "count": 3
+    },
+    {
+      "title": "Streak Keeper",
+      "imageUnlocked": "/icons/png/locked/streak_keeper_locked.png",
+      "imageComplate": "/icons/png/unlocked/streak_keeper_unlocked.png",
+      "description": "Maintain a 7-day daily challenge streak and strengthen your daily puzzle habit.",
+      "count": 7
+    },
+    {
+      "title": "Streak Legend",
+      "imageUnlocked": "/icons/png/locked/streak_legend_locked.png",
+      "imageComplate": "/icons/png/unlocked/streak_legend_unlocked.png",
+      "description": "Maintain a 30-day streak in daily challenges and achieve legendary consistency.",
+      "count": 30
+    },
+    {
+      "title": "Perfectionist",
+      "imageUnlocked": "/icons/png/locked/perfectionist_locked.png",
+      "imageComplate": "/icons/png/unlocked/perfectionist_unlocked.png",
+      "description": "Achieve 10 perfect runs without mistakes and demonstrate flawless logical precision.",
+      "count": 10
+    }
+  ]
+}

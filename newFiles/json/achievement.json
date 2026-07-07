@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "Slant Achievement – Track Your Puzzle Records",
+    "description": "View your slant achievement progress, unlock Slant records, review solved puzzles, and improve your daily logic streak.",
+    "keywords": ""
+  },
+  "hero":{
+ "H1":"Slant Achievements and Records",
+ "subtitle": "Track your daily Slant records, unlock goals, and review progress."},
+"sections": [
+        {
+          "title": "Track Your Slant Records",
+          "body": "Your slant daily game records make every slant daily game more meaningful, while each slant online result gives your slant online progress a clear history. On the achievements page, players can review solved dates, completion streaks, best times, mistake patterns, and unlocked milestones from previous daily challenges. \n This page works best when it feels like a personal puzzle dashboard. For example, a player might see “12 daily games completed,” “5-day streak,” or “3 perfect solves without hints.” These small stats turn casual solving into visible progress. Because Slant depends on diagonal placement, numbered intersections, and no-loop logic, records can also help players understand how their reasoning improves over time. \n Use review your Slant daily records to check your progress, then return to play today’s Slant online puzzle when you want to extend your streak. Many players casually treat records as motivation: even if they miss a fast solve, they still want one more completed slant daily game. A clear slant online record system makes the achievement page useful, not just decorative."
+        },
+ {
+          "title": "Unlock Slant Achievements",
+          "body": "A slant game achievement system gives every slant game session a goal beyond finishing the board, and a slant free progress page keeps slant free players motivated without adding pressure. Achievements can reward consistency, clean solving, replay effort, difficulty growth, and long-term puzzle habits. \n Good examples include “First Solve” for completing one puzzle, “Daily Starter” for finishing 7 daily boards, “No Hint Solver” for a perfect solve, and “Logic Master” for completing 100 archived or daily boards. You can also design difficulty-based goals, such as completing 10 easy puzzles, 10 medium puzzles, or 10 hard puzzles. These achievements help players understand what to try next. \n Use see unlocked Slant achievements as the main record hub and link to practice free Slant puzzles for players who want more progress. In puzzle communities, players often mention that small goals make logic games easier to keep playing. That is especially true for a slant game, because one better deduction can change the whole board. A slant free achievement system gives beginners, streak players, and advanced solvers a reason to return."
+        },
+ {
+          "title": "Review Progress and Improve",
+          "body": "A slant puzzle record is not only a badge; a slant puzzle record can show how your thinking changes across many slant puzzles. On an achievements page, previous slant puzzles become useful evidence: which boards you completed, which ones you missed, and where your solving style is improving. \n A strong review section can show practical stats such as total solved puzzles, current streak, longest streak, perfect solves, replayed archive boards, and average completion time. For example, if a player solves 30 daily puzzles and 18 are perfect solves, the perfect-solve rate is 60%. That kind of simple number gives players a clear target for improvement. \n Use analyze your Slant puzzle progress after daily play, then open replay older Slant puzzles to practice weak spots. Some players say the most useful review is not the final time, but the first mistake: did they overfill a 2 clue, miss a corner 0, or accidentally close a loop? A thoughtful slant puzzle record turns achievements into learning. Over time, slant puzzles become less about guessing and more about repeatable logic."
+        }
+],
+
+ "achievementItem":[
+{
+"id":"item1",
+"title":"first solver",
+"image":"images/icon/achievements/lucky.png",
+"description":"complet 1 solver!"
+},
+{
+"id":"item2",
+"title":"week solver",
+"image":"images/icon/achievements/mage.png",
+"description":"complet 7 solver!"
+},
+{
+"id":"item3",
+"title":"solver good",
+"image":"images/icon/achievements/minigun.png",
+"description":"complet 100 solver!"
+}
+]
+}

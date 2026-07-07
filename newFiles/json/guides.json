@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "Slant Guides – Rules, Tips and Puzzle History",
+    "description": "Read Slant guides for rules, history, tips, and daily puzzle strategies to improve your solving skill and enjoy every board.",
+    "keywords": ""
+  },
+  "hero":{ 
+    "H1":"Slant Guides, Rules and Strategies",
+ "subtitle": "Learn Slant rules, history, tips, and daily puzzle strategies."},
+
+  "sections": [
+        {
+          "title": "Learn Slant Rules in One Place",
+          "body": "A slant game becomes easier once the slant game rules are clear, and every slant puzzle feels fairer when the slant puzzle logic makes sense. This guides page collects the basic rules, beginner explanations, and step-by-step examples players need before jumping into daily boards. \n Slant is built around a simple idea: each cell receives one diagonal line, each numbered intersection must touch the correct number of lines, and the final network must not close into a loop. That makes the slant game easy to start but surprisingly strict. A single wrong diagonal can satisfy one clue while breaking another nearby clue. \n Start with read the complete Slant rules guide, then use beginner Slant puzzle examples to see how corner 0s, edge 2s, and center 3s work. A practical habit is to check all 0 and 4 clues first, because they often force immediate decisions. Many players say a slant puzzle becomes less confusing once they stop guessing and focus on local clue counts. With the right guide, each slant game becomes a clean logic exercise, and each slant puzzle teaches a reusable pattern."
+        },
+ {
+          "title": "Build Better Solving Habits",
+          "body": "A slant daily game is easier to improve at when the slant daily game is supported by good guides, and repeated slant puzzles become more valuable when slant puzzles are reviewed after solving. This page should help players move from “I finished it” to “I understand why that solution worked.” \n Good Slant habits are small but powerful. First, scan restrictive clues: corners, edges, 0s, and 4s. Second, avoid placing a diagonal only because it looks symmetrical. Third, check loop risk before confirming a move. Fourth, replay a difficult board and identify the first clue that forced the correct path. \n Use daily Slant solving tips after finishing the slant of day, then compare your thinking with advanced Slant puzzle strategies. Some community players casually describe the best Slant progress as “fewer guesses, better next moves.” That is a useful goal. After seven days of slant daily game practice, a player can track solve time, mistake count, and perfect solves. Over time, repeated slant puzzles make the slant of day feel less random and more like a daily reasoning routine."
+        }
+]
+}
