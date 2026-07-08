@@ -3,7 +3,7 @@ import {SiteLayout} from '@/components/layout';
 import {PageHeading, TextBlock} from '@/components/shared';
 import {getAppMessages} from '@/lib/messages';
 
-const contactEmail = 'FrankAnqg@gmail.com';
+const contactEmail = 'contact@slantdaily.com';
 
 const sections = [
   {

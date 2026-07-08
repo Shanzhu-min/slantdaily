@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 import {AchievementDashboard} from '@/components/achievement-dashboard';
 import {SiteLayout} from '@/components/layout';
-import {PageHeading} from '@/components/shared';
+import {PageHeading, Sections} from '@/components/shared';
 import {getAppMessages} from '@/lib/messages';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -10,7 +10,11 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: page.metadata.title,
-    description: page.metadata.description
+    description: page.metadata.description,
+    robots: {
+      index: false,
+      follow: true
+    }
   };
 }
 
@@ -27,6 +31,7 @@ export default async function AchievementsPage() {
         }}
       />
       <AchievementDashboard items={page.items} />
+      {page.sections?.length ? <Sections sections={page.sections} /> : null}
     </SiteLayout>
   );
 }

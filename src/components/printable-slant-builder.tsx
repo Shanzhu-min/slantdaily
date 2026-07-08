@@ -15,6 +15,7 @@ type PrintableSlantBuilderProps = {
   title: string;
   subtitle: string;
   previewTitle: string;
+  initialPuzzle: SlantPuzzle | null;
 };
 
 const rules = [
@@ -58,13 +59,13 @@ function modeLabel(mode: PrintMode) {
   return mode === 'today' ? formatToday() : mode.charAt(0).toUpperCase() + mode.slice(1);
 }
 
-export function PrintableSlantBuilder({title, subtitle, previewTitle}: PrintableSlantBuilderProps) {
+export function PrintableSlantBuilder({title, subtitle, previewTitle, initialPuzzle}: PrintableSlantBuilderProps) {
   const [sessionId, setSessionId] = useState('');
   const [mode, setMode] = useState<PrintMode>('today');
   const [paperSize, setPaperSize] = useState<PaperSize>('letter');
   const [includeSolutions, setIncludeSolutions] = useState(false);
-  const [puzzle, setPuzzle] = useState<SlantPuzzle | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [puzzle, setPuzzle] = useState<SlantPuzzle | null>(initialPuzzle);
+  const [loading, setLoading] = useState(!initialPuzzle);
   const [error, setError] = useState('');
 
   const today = useMemo(() => formatToday(), []);
@@ -84,6 +85,13 @@ export function PrintableSlantBuilder({title, subtitle, previewTitle}: Printable
 
   useEffect(() => {
     if (!sessionId) {
+      return;
+    }
+
+    if (mode === 'today' && initialPuzzle) {
+      setPuzzle(initialPuzzle);
+      setLoading(false);
+      setError('');
       return;
     }
 
@@ -118,7 +126,7 @@ export function PrintableSlantBuilder({title, subtitle, previewTitle}: Printable
     return () => {
       cancelled = true;
     };
-  }, [mode, sessionId]);
+  }, [initialPuzzle, mode, sessionId]);
 
   function printPuzzle() {
     window.print();
@@ -240,7 +248,7 @@ function PrintablePage({
       </div>
       <div className="print-board-wrap">
         {loading ? (
-          <div className="print-loading">Loading puzzle...</div>
+          <div className="print-loading">Preparing printable puzzle...</div>
         ) : puzzle ? (
           <SlantBoard
             gridSize={puzzle.grid_size}

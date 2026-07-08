@@ -2,7 +2,7 @@
   "site": {
     "name": "Daily Slant",
     "description": "A daily logic puzzle site for Slant players.",
-    "url": "https://example.com",
+    "url": "https://slantdaily.com",
     "nav": [
       {
         "label": "Daily Slant",
@@ -30,11 +30,11 @@
     "home": {
       "metadata": {
         "title": "Slant Daily Game – Play Free Online Puzzles",
-        "description": "Play the slant daily game, solve a fresh slant online puzzle each day, learn rules, improve streaks, and sharpen logic skills."
+        "description": "Play a fresh Daily Slant puzzle, learn the rules, build a streak, and sharpen your logic skills with a quick online challenge."
       },
       "hero": {
         "title": "Play Daily Slant",
-        "subtitle": "Play the slant daily game today and make the slant daily game part of your quick logic routine. This slant of day challenge gives you one fresh slant of day puzzle to solve, compare, and replay without needing a long session. Each board asks you to place diagonal lines across the grid while matching numbered intersections and avoiding closed loops.\nThe appeal is simple: a daily board gives structure. You are not just opening another random puzzle; you are solving the same challenge other players see today. That makes the experience more social, even when you play solo. Many players say the best first move is to scan corner clues, because corners usually have fewer possible diagonal choices.\nTry starting from play today’s Daily Slant puzzle, then return tomorrow to protect your streak. The slant daily game works well as a 5-minute warm-up, while the slant of day format gives returning players a reason to build consistency. Over time, the slant daily game becomes less about guessing and more about spotting forced diagonal logic. If you enjoy a clean slant of day puzzle, daily play is the easiest habit to keep."
+        "subtitle": "Start with today’s Daily Slant puzzle and give yourself a short, focused logic break. Each board asks you to place diagonal lines across the grid, match the numbered intersections, and avoid closing a loop.\nThe appeal is simple: one fresh board gives the day a small challenge with clear rules and a satisfying finish. You are not just opening a random puzzle; you are solving the same puzzle other players see today, which makes the experience feel a little more shared even when you play solo. Many players begin by scanning corner clues, because corners usually leave fewer possible diagonal choices.\nSolve today’s board, then come back tomorrow to keep your streak alive. A Daily Slant puzzle works well as a 5-minute warm-up, a quick reset between tasks, or a calm evening habit. Over time, daily play becomes less about guessing and more about recognizing forced diagonal logic."
       },
       "sections": [
         {
@@ -43,11 +43,11 @@
         },
         {
           "title": "How to Play Slant",
-          "body": "To play slant online, open a grid and place one diagonal line in every cell; slant online play usually lets you click or tap to switch between slash directions. In a slant free puzzle, you can practice the same rules without payment, and slant free access is ideal for learning before trying harder daily boards.\nStart with the numbers. A number tells you how many diagonal lines should meet at that intersection. A 0 means no adjacent line may touch it. A 4 means all possible surrounding lines must touch it. Middle 1s, 2s, and 3s require more careful checking, especially when nearby cells are already fixed.\nA reliable routine is: scan all 0s and 4s, solve corner clues, check edge clues, then watch for loops. For example, if one more diagonal would close a small box, the opposite diagonal may be forced. Use step-by-step Slant solving tips when you get stuck. Many players say the biggest beginner mistake in slant online solving is treating number clues as the only rule and forgetting loop prevention. A slant free practice board is perfect for testing this: solve slowly, mark uncertain cells mentally, and avoid guessing until all local clues are checked. With regular slant online practice, slant free puzzles become a useful training ground for the daily challenge."
+          "body": "To play Slant online, open a grid and place one diagonal line in every cell. Clicking or tapping a square switches between slash directions, so the controls stay simple while the logic grows more interesting.\nStart with the numbers. A number tells you how many diagonal lines should meet at that intersection. A 0 means no adjacent line may touch it. A 4 means all possible surrounding lines must touch it. Middle 1s, 2s, and 3s require more careful checking, especially when nearby cells are already fixed.\nA reliable routine is: scan all 0s and 4s, solve corner clues, check edge clues, then watch for loops. For example, if one more diagonal would close a small box, the opposite diagonal may be forced. Use step-by-step Slant solving tips when you get stuck. Many beginners focus only on number clues and forget the no-loop rule, but that second rule is often what reveals the next move. Practice boards are useful because you can slow down, mark uncertain cells mentally, and avoid guessing until the local clues are checked."
         },
         {
           "title": "Why Is It Worth Playing Slant Every Day",
-          "body": "A slant daily game gives you a small, repeatable brain workout, and the slant daily game format makes progress easy to notice. Instead of solving random slant puzzles only when you remember, daily slant puzzles create a streak, a target, and a reason to return. For logic-game players, that routine is often more motivating than endless puzzle lists.\nThe value comes from repetition with variation. The rules stay the same, but every board changes the clue pattern. After 7 days, you may already recognize common openings such as corner 0s, edge 2s, and forced anti-loop moves. After 30 days, you can track real improvement through solve time, mistake count, and how often you finish without hints.\nDaily Slant also fits modern play habits. You can solve one board during coffee, after lunch, or before starting work. The page can link naturally to today’s Slant of Day challenge and previous daily Slant puzzles, which helps both users and search engines understand the site structure. Some players in puzzle communities mention that Slant often becomes a “one more puzzle” habit because the rules are short but the deductions stay satisfying. That is why a slant daily game works so well: it makes slant puzzles feel focused, measurable, and easy to repeat. For anyone who likes a clean slant of day challenge, daily solving is worth keeping."
+          "body": "A daily puzzle gives you a small, repeatable brain workout, and the format makes progress easy to notice. Instead of choosing from an endless list of boards, you get one clear target for the day and a reason to return tomorrow. For logic-game players, that rhythm is often more motivating than unlimited random puzzles.\nThe value comes from repetition with variation. The rules stay the same, but every board changes the clue pattern. After 7 days, you may already recognize common openings such as corner 0s, edge 2s, and forced anti-loop moves. After 30 days, you can track real improvement through solve time, mistake count, and how often you finish without hints.\nDaily Slant also fits modern play habits. You can solve one board during coffee, after lunch, or before starting work. Some players mention that Slant becomes a “one more puzzle” habit because the rules are short but the deductions stay satisfying. That is why the daily format works so well: it makes each puzzle focused, measurable, and easy to repeat."
         },
         {
           "title": "Slant Tips",
@@ -59,24 +59,24 @@
         "description": "Get answers to common questions about Slant daily puzzles",
         "items": [
           {
-            "question": "Is slant daily game free?",
-            "answer": "Yes. The slant daily game can be played as a free daily logic challenge. A slant daily game works best when players can return each day, solve one shared board, and build a streak without extra setup."
+            "question": "Is Daily Slant free?",
+            "answer": "Yes. Daily Slant is a free logic challenge. You can return each day, solve one shared board, and build a streak without extra setup."
           },
           {
             "question": "How do I play slant online?",
-            "answer": "To play slant online, place one diagonal line in every square, match each numbered point, and avoid closed loops. Slant online play is easiest when you start with corner clues, 0s, and 4s."
+            "answer": "Place one diagonal line in every square, match each numbered point, and avoid closed loops. The easiest openings usually come from corner clues, 0s, and 4s."
           },
           {
             "question": "What makes slant puzzle hard?",
             "answer": "A slant puzzle becomes hard because every cell has only two choices, but one wrong diagonal can break a number or close a loop. A good slant puzzle rewards slow deduction over guessing."
           },
           {
-            "question": "What is slant of day?",
-            "answer": "Slant of day means one fresh daily Slant challenge shared by all players. A slant of day format makes the puzzle more repeatable, trackable, and useful for streak-based logic practice."
+            "question": "What is the daily puzzle?",
+            "answer": "The daily puzzle is one fresh Slant challenge shared by all players. It gives returning players a simple way to build streaks and compare progress over time."
           },
           {
-            "question": "Where can I find slant free puzzles?",
-            "answer": "You can find slant free puzzles on daily pages, archives, and practice sections. Slant free play is useful for learning rules, testing strategies, and improving before harder daily boards."
+            "question": "Where can I find more free puzzles?",
+            "answer": "You can use the daily page, archives, and practice sections for more boards. Extra practice is useful for learning rules, testing strategies, and preparing for harder puzzles."
           }
         ]
       }
@@ -270,7 +270,7 @@
       "print": {
         "previewTitle": "Play Slant Daily",
         "footerLine": "A daily logic puzzle for sharp minds.",
-        "domain": "daily-slant.example",
+        "domain": "slantdaily.com",
         "tips": [
           "Trace forced cells first.",
           "Avoid closing small loops.",

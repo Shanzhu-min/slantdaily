@@ -4,6 +4,18 @@ import type {AppMessages} from './types';
 
 let cachedMessages: AppMessages | null = null;
 
+function getConfiguredSiteUrl(fallback: string) {
+  return (process.env.NEXT_PUBLIC_SITE_URL ?? fallback).replace(/\/$/, '');
+}
+
+function getHostname(url: string) {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  }
+}
+
 export async function getAppMessages() {
   if (cachedMessages) {
     return cachedMessages;
@@ -13,7 +25,12 @@ export async function getAppMessages() {
   const source = file.trim();
 
   try {
-    cachedMessages = JSON.parse(source) as AppMessages;
+    const messages = JSON.parse(source) as AppMessages;
+    const siteUrl = getConfiguredSiteUrl(messages.site.url);
+
+    messages.site.url = siteUrl;
+    messages.pages.printable.print.domain = getHostname(siteUrl);
+    cachedMessages = messages;
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Unknown JSON parse error.';
     throw new Error(`Failed to parse app messages (${source.length} chars): ${message}`);

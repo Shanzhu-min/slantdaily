@@ -135,7 +135,7 @@ export function AchievementDashboard({items}: {items: AchievementItem[]}) {
                   style={{width: `${loading ? 0 : achievement.percent}%`}}
                 />
               </div>
-              <p>{loading ? 'Loading progress' : `${achievement.current} of ${achievement.total}`}</p>
+              <p>{`${achievement.current} of ${achievement.total}`}</p>
             </div>
           </article>
         ))}

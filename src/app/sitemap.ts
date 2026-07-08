@@ -4,9 +4,10 @@ import path from 'path';
 import {fixedRoutes} from '@/config/navigation';
 
 const articlesPerPage = 6;
+const noindexRoutes = new Set(['/achievements']);
 
 function getSiteUrl() {
-  return (process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000').replace(/\/$/, '');
+  return (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://slantdaily.com').replace(/\/$/, '');
 }
 
 function getGuideEntries(siteUrl: string): MetadataRoute.Sitemap {
@@ -60,11 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact': {changeFrequency: 'yearly', priority: 0.3}
   };
 
-  const fixedEntries = fixedRoutes.map((route) => ({
-    url: `${siteUrl}${route === '/' ? '' : route}`,
-    lastModified: new Date(),
-    ...routeSettings[route]
-  }));
+  const fixedEntries = fixedRoutes
+    .filter((route) => !noindexRoutes.has(route))
+    .map((route) => ({
+      url: `${siteUrl}${route === '/' ? '' : route}`,
+      lastModified: new Date(),
+      ...routeSettings[route]
+    }));
 
   return [...fixedEntries, ...getGuideEntries(siteUrl)];
 }

@@ -62,10 +62,10 @@ function buildCalendarCells(days: SlantArchiveDay[]) {
   return [...Array.from({length: leading}, () => null), ...days];
 }
 
-export function ArchiveCalendar() {
+export function ArchiveCalendar({initialArchive}: {initialArchive: SlantArchiveMonth | null}) {
   const [sessionId, setSessionId] = useState('');
-  const [archive, setArchive] = useState<SlantArchiveMonth | null>(null);
-  const [archiveLoading, setArchiveLoading] = useState(true);
+  const [archive, setArchive] = useState<SlantArchiveMonth | null>(initialArchive);
+  const [archiveLoading, setArchiveLoading] = useState(!initialArchive);
   const [archiveError, setArchiveError] = useState('');
   const [selectedDay, setSelectedDay] = useState<SlantArchiveDay | null>(null);
   const [selectedPuzzle, setSelectedPuzzle] = useState<SlantPuzzle | null>(null);
@@ -113,6 +113,11 @@ export function ArchiveCalendar() {
       return;
     }
 
+    if (initialArchive) {
+      void loadArchiveMonth(initialArchive.year, initialArchive.month, false);
+      return;
+    }
+
     void loadArchiveMonth();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sessionId]);
@@ -126,8 +131,10 @@ export function ArchiveCalendar() {
     return () => window.clearInterval(id);
   }, [boardLoading, completed, selectedPuzzle]);
 
-  async function loadArchiveMonth(year?: number, month?: number) {
-    setArchiveLoading(true);
+  async function loadArchiveMonth(year?: number, month?: number, showLoading = true) {
+    if (showLoading) {
+      setArchiveLoading(true);
+    }
     setArchiveError('');
 
     try {
@@ -137,7 +144,9 @@ export function ArchiveCalendar() {
       const message = error instanceof Error ? error.message : 'Archive failed to load.';
       setArchiveError(message);
     } finally {
-      setArchiveLoading(false);
+      if (showLoading) {
+        setArchiveLoading(false);
+      }
     }
   }
 
@@ -156,7 +165,7 @@ export function ArchiveCalendar() {
     setResetCount(0);
     setCompleted(false);
     setBoardLoading(true);
-    setHint(`Loading ${formatDateLabel(day.date)} puzzle...`);
+    setHint(`Preparing the ${formatDateLabel(day.date)} puzzle...`);
 
     try {
       const puzzle = await fetchDailyPuzzleByDate(day.date, sessionId);
@@ -300,7 +309,7 @@ export function ArchiveCalendar() {
         <div className="calendar-toolbar">
           <div>
             <h2>{archive ? `${formatMonthName(archive.month)} ${archive.year}` : 'Archive'}</h2>
-            <p>Daily puzzle history is loaded from the puzzle bank.</p>
+            <p>Choose a playable date to replay a previous Daily Slant puzzle.</p>
           </div>
           <div className="select-row">
             <select
@@ -335,7 +344,7 @@ export function ArchiveCalendar() {
         </div>
 
         {archiveError ? <p className="calendar-message error">{archiveError}</p> : null}
-        {archiveLoading ? <p className="calendar-message">Loading archive...</p> : null}
+        {archiveLoading ? <p className="calendar-message">Preparing the archive calendar...</p> : null}
 
         <div className="calendar-grid">
           {weekdays.map((day) => (
@@ -397,11 +406,11 @@ export function ArchiveCalendar() {
                     onCellClick={handleCellClick}
                   />
                 ) : (
-                  <div className="archive-empty-board">Loading archive puzzle.</div>
+                  <div className="archive-empty-board">Preparing archive puzzle.</div>
                 )}
                 {boardLoading ? (
                   <div className="game-board-loading" role="status" aria-live="polite">
-                    <strong>Loading puzzle...</strong>
+                    <strong>Preparing puzzle...</strong>
                     <span>Please wait. This usually takes 1-3 seconds.</span>
                   </div>
                 ) : null}

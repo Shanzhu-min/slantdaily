@@ -48,20 +48,12 @@ export function AchievementRecordsPanel({
   loading: boolean;
   error: string;
 }) {
-  const stats = loading
-    ? [
-        {label: 'Challenges', value: 'Loading'},
-        {label: 'Best Time', value: 'Loading'},
-        {label: 'Best Day', value: 'Loading'},
-        {label: 'Practice Runs', value: 'Loading'},
-        {label: 'First Played', value: 'Loading'},
-        {label: 'Longest Streak', value: 'Loading'}
-      ]
-    : buildStats(records);
+  const stats = buildStats(records);
 
   return (
     <aside className="surface stats-panel" aria-label="Player records">
       <h2>Records</h2>
+      {loading ? <p className="records-message">Syncing browser records...</p> : null}
       {error ? <p className="records-message error">{error}</p> : null}
       <div className="stats-list">
         {stats.map((stat) => (
