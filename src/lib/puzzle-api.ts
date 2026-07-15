@@ -18,11 +18,23 @@ async function readPuzzleResponse(response: Response) {
   return data.puzzle;
 }
 
-export async function fetchDailyPuzzle(sessionId: string) {
-  const response = await fetch(`/api/puzzles/daily?sessionId=${encodeURIComponent(sessionId)}`, {
+export async function fetchDailyPuzzle() {
+  const response = await fetch('/api/puzzles/daily');
+  return readPuzzleResponse(response);
+}
+
+export async function recordDailyPuzzleLoad(seed: string, sessionId: string) {
+  const response = await fetch('/api/puzzles/daily-load', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({seed, sessionId}),
+    keepalive: true,
     cache: 'no-store'
   });
-  return readPuzzleResponse(response);
+
+  if (!response.ok) {
+    throw new Error('Daily puzzle load record failed.');
+  }
 }
 
 export async function fetchPrintableDailyPuzzle(sessionId: string) {

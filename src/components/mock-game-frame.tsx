@@ -1,13 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import {useEffect, useMemo, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {CirclePlay} from 'lucide-react';
 import {
   fetchDailyPuzzle,
   fetchDailyStats,
   fetchDailyStatus,
   fetchPracticePuzzle,
+  recordDailyPuzzleLoad,
   recordDailyComplete,
   recordPracticeComplete
 } from '@/lib/puzzle-api';
@@ -287,6 +288,7 @@ export function MockGameFrame() {
   const [showGuide, setShowGuide] = useState(false);
   const [guideStep, setGuideStep] = useState(0);
   const practiceLoadId = useRef(0);
+  const dailyLoadRecordKey = useRef('');
 
   const size = activePuzzle?.grid_size ?? (mode === 'practice' ? difficultyGridSizes[difficulty] : 6);
   const clues = activePuzzle?.clue_grid ?? [];
@@ -313,6 +315,24 @@ export function MockGameFrame() {
     [currentGuideStep]
   );
 
+  const recordDailyLoadInBackground = useCallback(
+    (puzzle: SlantPuzzle) => {
+      if (!sessionId) {
+        return;
+      }
+
+      const recordKey = `${todayIso}:${puzzle.seed}`;
+
+      if (dailyLoadRecordKey.current === recordKey) {
+        return;
+      }
+
+      dailyLoadRecordKey.current = recordKey;
+      void recordDailyPuzzleLoad(puzzle.seed, sessionId).catch(() => undefined);
+    },
+    [sessionId, todayIso]
+  );
+
   useEffect(() => {
     setSessionId(getOrCreatePlayerSessionId());
   }, []);
@@ -331,9 +351,10 @@ export function MockGameFrame() {
 
     if (cachedPuzzle) {
       setDailyPuzzle(cachedPuzzle);
+      recordDailyLoadInBackground(cachedPuzzle);
     }
 
-    fetchDailyPuzzle(sessionId)
+    fetchDailyPuzzle()
       .then((puzzle) => {
         if (cancelled) {
           return;
@@ -341,6 +362,7 @@ export function MockGameFrame() {
 
         setDailyPuzzle(puzzle);
         writeCachedDailyPuzzle(todayIso, puzzle);
+        recordDailyLoadInBackground(puzzle);
         setLoadState('ready');
         setHint('Daily puzzle ready.');
       })
@@ -362,7 +384,7 @@ export function MockGameFrame() {
     return () => {
       cancelled = true;
     };
-  }, [sessionId, todayIso]);
+  }, [recordDailyLoadInBackground, sessionId, todayIso]);
 
   useEffect(() => {
     if (!isActive) {

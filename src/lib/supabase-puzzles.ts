@@ -27,12 +27,20 @@ const fallbackSeeds: Record<Difficulty, string[]> = {
 };
 const dailyFallbackSeeds = [...fallbackSeeds.medium, ...fallbackSeeds.hard];
 
-const DAILY_PUZZLE_CACHE_TTL_MS = 5 * 60 * 1000;
 let dailyPuzzleCache: {cacheDate: string; expiresAt: number; puzzle: SlantPuzzle} | null = null;
 let dailyPuzzleInflight: Promise<SlantPuzzle | null> | null = null;
 
 function currentUtcDateKey() {
   return new Date().toISOString().slice(0, 10);
+}
+
+function nextUtcDateStartMs() {
+  const now = new Date();
+  return Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1);
+}
+
+export function secondsUntilDailyPuzzleRefresh() {
+  return Math.max(1, Math.floor((nextUtcDateStartMs() - Date.now()) / 1000));
 }
 
 function supabaseConfig() {
@@ -291,18 +299,27 @@ async function getPuzzleBySeed(seed: string, sessionId: string | null) {
   return normalizePuzzle(data);
 }
 
-function recordCachedDailyLoad(puzzle: SlantPuzzle, sessionId: string | null) {
-  if (!sessionId) {
-    return;
+async function readDailyPuzzleFromDatabase() {
+  try {
+    const data = await callRpc<unknown>('get_slant_daily_puzzle_content', {});
+    const puzzle = normalizePuzzle(data);
+
+    if (puzzle) {
+      return puzzle;
+    }
+  } catch (error) {
+    if (error instanceof SupabasePuzzleError && error.status === 503) {
+      throw error;
+    }
+
+    if (!isMissingRpcSignature(error)) {
+      throw error;
+    }
   }
 
-  void getPuzzleBySeed(puzzle.seed, sessionId).catch(() => undefined);
-}
-
-async function readDailyPuzzleFromDatabase(sessionId: string | null) {
   try {
     const data = await callRpc<unknown>('get_slant_daily_puzzle', {
-      p_session_id: sessionId
+      p_session_id: null
     });
     const puzzle = normalizePuzzle(data);
 
@@ -320,34 +337,27 @@ async function readDailyPuzzleFromDatabase(sessionId: string | null) {
   }
 
   const index = new Date().getUTCDate() % dailyFallbackSeeds.length;
-  return getPuzzleBySeed(dailyFallbackSeeds[index], sessionId);
+  return getPuzzleBySeed(dailyFallbackSeeds[index], null);
 }
 
-export async function getDailyPuzzle(sessionId: string | null) {
+export async function getDailyPuzzle() {
   const now = Date.now();
   const cacheDate = currentUtcDateKey();
 
   if (dailyPuzzleCache && dailyPuzzleCache.cacheDate === cacheDate && dailyPuzzleCache.expiresAt > now) {
-    recordCachedDailyLoad(dailyPuzzleCache.puzzle, sessionId);
     return dailyPuzzleCache.puzzle;
   }
 
   if (dailyPuzzleInflight) {
-    const puzzle = await dailyPuzzleInflight;
-
-    if (puzzle) {
-      recordCachedDailyLoad(puzzle, sessionId);
-    }
-
-    return puzzle;
+    return dailyPuzzleInflight;
   }
 
-  dailyPuzzleInflight = readDailyPuzzleFromDatabase(sessionId)
+  dailyPuzzleInflight = readDailyPuzzleFromDatabase()
     .then((puzzle) => {
       if (puzzle) {
         dailyPuzzleCache = {
           cacheDate,
-          expiresAt: Date.now() + DAILY_PUZZLE_CACHE_TTL_MS,
+          expiresAt: nextUtcDateStartMs(),
           puzzle
         };
       }
@@ -359,6 +369,25 @@ export async function getDailyPuzzle(sessionId: string | null) {
     });
 
   return dailyPuzzleInflight;
+}
+
+export async function recordDailyPuzzleLoad(seed: string | null, sessionId: string | null) {
+  if (!seed || !sessionId) {
+    return;
+  }
+
+  try {
+    await callRpc<unknown>('record_slant_daily_load', {
+      p_seed: seed,
+      p_session_id: sessionId
+    });
+  } catch (error) {
+    if (!isMissingRpcSignature(error)) {
+      throw error;
+    }
+
+    await getPuzzleBySeed(seed, sessionId);
+  }
 }
 
 export async function getPrintableDailyPuzzle(sessionId: string | null) {
@@ -381,7 +410,7 @@ export async function getPrintableDailyPuzzle(sessionId: string | null) {
     }
   }
 
-  return getDailyPuzzle(sessionId);
+  return getDailyPuzzle();
 }
 
 export async function getPracticePuzzle(
